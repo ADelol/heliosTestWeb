@@ -55,7 +55,7 @@ public class FizzBuzzController {
         this.fizzbuzz.increment();
         log.info(String.valueOf(limit));
         if (int1 < 1 || int2 < 1 || limit < 1 || str1.equals("") || str2.equals("")) {
-            throw new BadRequestException("Integers must be superior to 0 and strings not null");
+            throw new BadRequestException("Integers must be superior to 0 and strings not empty");
         }
         return ResponseEntity.ok(this.fizzBuzzService.applyFizzBuzz(int1, int2, limit, str1, str2));
     }
